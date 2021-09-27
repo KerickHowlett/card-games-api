@@ -1,0 +1,11 @@
+# Start New Game & Receive It's Game ID.
+PUT http://localhost:5000/game HTTP/1.1
+content-type: application/json
+
+# Check Score.
+GET http://localhost:5000/game/[inject Game ID here] HTTP/1.1
+content-type: application/json
+
+# Play Game.
+POST http://localhost:5000/game/[inject Game ID here]/play HTTP/1.1
+content-type: application/json

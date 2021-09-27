@@ -1,0 +1,8 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+yarn reset:dependencies
+# yarn format:package
+# yarn format:write
+# yarn lint:fix:all
+# yarn affected:test

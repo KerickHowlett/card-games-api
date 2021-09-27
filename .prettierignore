@@ -1,0 +1,8 @@
+/.git
+/.husky
+/coverage
+/database
+/dist
+/node_modules
+/rest-client-commands
+**/**/app.ts.

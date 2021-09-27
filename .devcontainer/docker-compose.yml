@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+    api-card-games-development-environment:
+        image: ghcr.io/kerickhowlett/node-dev-environment:latest
+        environment:
+            - COMPOSE_PROJECT_NAME=card-games-api
+        container_name: api-card-games-development-environment
+        hostname: api-card-games-development-environment
+        init: true
+        privileged: true
+        cap_add:
+            - SYS_PTRACE
+        security_opt:
+            - seccomp:unconfined
+        volumes:
+            - ..:/workspace:cached
+            - /var/run/docker.sock:/var/run/docker.sock
+            - extensions:/home/node/.vscode-server/extensions
+            - global-modules:/usr/local/share/npm-global/lib/node_modules
+            - app-modules:/workspace/node_modules
+
+volumes:
+    extensions:
+        name: card-games-api-extensions
+    global-modules:
+        name: card-games-global-modules
+    app-modules:
+        name: card-games-project-modules

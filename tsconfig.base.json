@@ -1,0 +1,77 @@
+{
+    "compileOnSave": false,
+    "compilerOptions": {
+        "rootDir": ".",
+        "sourceMap": true,
+        "declaration": false,
+        "moduleResolution": "node",
+        "emitDecoratorMetadata": true,
+        "esModuleInterop": true,
+        "experimentalDecorators": true,
+        "importHelpers": true,
+        "target": "es6",
+        "module": "esnext",
+        "lib": ["es2017", "dom", "es6"],
+        "skipLibCheck": true,
+        "skipDefaultLibCheck": true,
+        "baseUrl": ".",
+        "paths": {
+            "@card-games-api/battle-logs": [
+                "libs/war/battle-logs/src/lib/index.ts"
+            ],
+            "@card-games-api/battle-logs/testing": [
+                "libs/war/battle-logs/src/testing/index.ts"
+            ],
+            "@card-games-api/battles": ["libs/war/battles/src/lib/index.ts"],
+            "@card-games-api/battles/testing": [
+                "libs/war/battles/src/testing/index.ts"
+            ],
+            "@card-games-api/database": ["libs/shared/database/src/index.ts"],
+            "@card-games-api/database/nedb": [
+                "libs/shared/database/src/lib/nedb/index.ts"
+            ],
+            "@card-games-api/database/nedb/testing": [
+                "libs/shared/database/src/testing/nedb/index.ts"
+            ],
+            "@card-games-api/database/node-cache": [
+                "libs/shared/database/src/lib/node-cache/index.ts"
+            ],
+            "@card-games-api/database/node-cache/testing": [
+                "libs/shared/database/src/testing/node-cache/index.ts"
+            ],
+            "@card-games-api/database/testing": [
+                "libs/shared/database/src/testing/index.ts"
+            ],
+            "@card-games-api/decks": ["libs/war/decks/src/lib/index.ts"],
+            "@card-games-api/decks/testing": [
+                "libs/war/decks/src/testing/index.ts"
+            ],
+            "@card-games-api/environment": [
+                "libs/shared/environment/src/lib/index.ts"
+            ],
+            "@card-games-api/games": ["libs/war/games/src/lib/index.ts"],
+            "@card-games-api/games/testing": [
+                "libs/war/games/src/testing/index.ts"
+            ],
+            "@card-games-api/logger": ["libs/shared/logger/src/lib/index.ts"],
+            "@card-games-api/logger/testing": [
+                "libs/shared/logger/src/testing/index.ts"
+            ],
+            "@card-games-api/middlewares": [
+                "libs/shared/middlewares/src/lib/index.ts"
+            ],
+            "@card-games-api/players": ["libs/war/players/src/lib/index.ts"],
+            "@card-games-api/players/testing": [
+                "libs/war/players/src/testing/index.ts"
+            ],
+            "@card-games-api/system": ["libs/shared/system/src/lib/index.ts"],
+            "@card-games-api/utils": ["libs/shared/utils/src/lib/index.ts"],
+            "@card-games-api/utils/testing": [
+                "libs/shared/utils/src/testing/index.ts"
+            ],
+            "@card-games-api/war": ["apps/war/src/app/index.ts"],
+            "@card-games-api/war/testing": ["apps/war/src/testing/index.ts"]
+        }
+    },
+    "exclude": ["node_modules", "tmp", "**/src/testing"]
+}

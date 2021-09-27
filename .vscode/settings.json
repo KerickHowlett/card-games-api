@@ -1,0 +1,10 @@
+{
+    "eslint.options": {
+        "jshint.enable": false
+    },
+    "git.ignoreLimitWarning": true,
+    "terminal.integrated.defaultProfile.linux": "zsh",
+    "remote.restoreForwardedPorts": false,
+    "jest.jestCommandLine": "yarn test:watch",
+    "cSpell.words": ["quokka"]
+}

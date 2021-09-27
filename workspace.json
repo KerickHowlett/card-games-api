@@ -1,0 +1,388 @@
+{
+    "version": 2,
+    "projects": {
+        "battle-logs": {
+            "root": "libs/war/battle-logs",
+            "sourceRoot": "libs/war/battle-logs/src",
+            "projectType": "library",
+            "targets": {
+                "build": {
+                    "executor": "@nrwl/node:package",
+                    "outputs": ["{options.outputPath}"],
+                    "options": {
+                        "outputPath": "dist/libs/war/battle-logs",
+                        "tsConfig": "libs/war/battle-logs/tsconfig.lib.json",
+                        "packageJson": "libs/war/battle-logs/package.json",
+                        "main": "libs/war/battle-logs/src/index.ts",
+                        "assets": ["libs/war/battle-logs/*.md"],
+                        "srcRootForCompilationRoot": "tsconfig.base.json"
+                    }
+                },
+                "lint": {
+                    "executor": "@nrwl/linter:eslint",
+                    "options": {
+                        "lintFilePatterns": ["libs/war/battle-logs/**/*.ts"]
+                    }
+                },
+                "test": {
+                    "executor": "@nrwl/jest:jest",
+                    "outputs": ["coverage/libs/war/battle-logs"],
+                    "options": {
+                        "jestConfig": "libs/war/battle-logs/jest.config.js",
+                        "passWithNoTests": true
+                    }
+                }
+            }
+        },
+        "battles": {
+            "root": "libs/war/battles",
+            "sourceRoot": "libs/war/battles/src",
+            "projectType": "library",
+            "targets": {
+                "build": {
+                    "executor": "@nrwl/node:package",
+                    "outputs": ["{options.outputPath}"],
+                    "options": {
+                        "outputPath": "dist/libs/war/battles",
+                        "tsConfig": "libs/war/battles/tsconfig.lib.json",
+                        "packageJson": "libs/war/battles/package.json",
+                        "main": "libs/war/battles/src/index.ts",
+                        "assets": ["libs/war/battles/*.md"],
+                        "srcRootForCompilationRoot": "tsconfig.base.json"
+                    }
+                },
+                "lint": {
+                    "executor": "@nrwl/linter:eslint",
+                    "options": {
+                        "lintFilePatterns": ["libs/war/battles/**/*.ts"]
+                    }
+                },
+                "test": {
+                    "executor": "@nrwl/jest:jest",
+                    "outputs": ["coverage/libs/war/battles"],
+                    "options": {
+                        "jestConfig": "libs/war/battles/jest.config.js",
+                        "passWithNoTests": true
+                    }
+                }
+            }
+        },
+        "database": {
+            "root": "libs/shared/database",
+            "sourceRoot": "libs/shared/database/src",
+            "projectType": "library",
+            "targets": {
+                "build": {
+                    "executor": "@nrwl/node:package",
+                    "outputs": ["{options.outputPath}"],
+                    "options": {
+                        "outputPath": "dist/libs/shared/database",
+                        "tsConfig": "libs/shared/database/tsconfig.lib.json",
+                        "packageJson": "libs/shared/database/package.json",
+                        "main": "libs/shared/database/src/index.ts",
+                        "assets": ["libs/shared/database/*.md"],
+                        "srcRootForCompilationRoot": "tsconfig.base.json"
+                    }
+                },
+                "lint": {
+                    "executor": "@nrwl/linter:eslint",
+                    "options": {
+                        "lintFilePatterns": ["libs/shared/database/**/*.ts"]
+                    }
+                },
+                "test": {
+                    "executor": "@nrwl/jest:jest",
+                    "outputs": ["coverage/libs/shared/database"],
+                    "options": {
+                        "jestConfig": "libs/shared/database/jest.config.js",
+                        "passWithNoTests": true
+                    }
+                }
+            }
+        },
+        "decks": {
+            "root": "libs/war/decks",
+            "sourceRoot": "libs/war/decks/src",
+            "projectType": "library",
+            "targets": {
+                "lint": {
+                    "executor": "@nrwl/linter:eslint",
+                    "options": {
+                        "lintFilePatterns": ["libs/war/decks/**/*.ts"]
+                    }
+                },
+                "test": {
+                    "executor": "@nrwl/jest:jest",
+                    "outputs": ["coverage/libs/war/decks"],
+                    "options": {
+                        "jestConfig": "libs/war/decks/jest.config.js",
+                        "passWithNoTests": true
+                    }
+                }
+            }
+        },
+        "environment": {
+            "root": "libs/shared/environment",
+            "sourceRoot": "libs/shared/environment/src",
+            "projectType": "library",
+            "targets": {
+                "build": {
+                    "executor": "@nrwl/workspace:tsc",
+                    "outputs": ["{options.outputPath}"],
+                    "options": {
+                        "outputPath": "dist/libs/shared/environment",
+                        "main": "libs/shared/environment/src/index.ts",
+                        "tsConfig": "libs/shared/environment/tsconfig.lib.json",
+                        "assets": ["libs/shared/environment/*.md"]
+                    }
+                },
+                "lint": {
+                    "executor": "@nrwl/linter:eslint",
+                    "options": {
+                        "lintFilePatterns": ["libs/shared/environment/**/*.ts"]
+                    }
+                }
+            }
+        },
+        "games": {
+            "root": "libs/war/games",
+            "sourceRoot": "libs/war/games/src",
+            "projectType": "library",
+            "targets": {
+                "build": {
+                    "executor": "@nrwl/node:package",
+                    "outputs": ["{options.outputPath}"],
+                    "options": {
+                        "outputPath": "dist/libs/war/games",
+                        "tsConfig": "libs/war/games/tsconfig.lib.json",
+                        "packageJson": "libs/war/games/package.json",
+                        "main": "libs/war/games/src/index.ts",
+                        "assets": ["libs/war/games/*.md"],
+                        "srcRootForCompilationRoot": "tsconfig.base.json"
+                    }
+                },
+                "lint": {
+                    "executor": "@nrwl/linter:eslint",
+                    "options": {
+                        "lintFilePatterns": ["libs/war/games/**/*.ts"]
+                    }
+                },
+                "test": {
+                    "executor": "@nrwl/jest:jest",
+                    "outputs": ["coverage/libs/war/games"],
+                    "options": {
+                        "jestConfig": "libs/war/games/jest.config.js",
+                        "passWithNoTests": true
+                    }
+                }
+            }
+        },
+        "logger": {
+            "root": "libs/shared/logger",
+            "sourceRoot": "libs/shared/logger/src",
+            "projectType": "library",
+            "targets": {
+                "build": {
+                    "executor": "@nrwl/node:package",
+                    "outputs": ["{options.outputPath}"],
+                    "options": {
+                        "outputPath": "dist/libs/shared/logger",
+                        "tsConfig": "libs/shared/logger/tsconfig.lib.json",
+                        "packageJson": "libs/shared/logger/package.json",
+                        "main": "libs/shared/logger/src/index.ts",
+                        "assets": ["libs/shared/logger/*.md"],
+                        "srcRootForCompilationRoot": "tsconfig.base.json"
+                    }
+                },
+                "lint": {
+                    "executor": "@nrwl/linter:eslint",
+                    "options": {
+                        "lintFilePatterns": ["libs/shared/logger/**/*.ts"]
+                    }
+                },
+                "test": {
+                    "executor": "@nrwl/jest:jest",
+                    "outputs": ["coverage/libs/shared/logger"],
+                    "options": {
+                        "jestConfig": "libs/shared/logger/jest.config.js",
+                        "passWithNoTests": true
+                    }
+                }
+            }
+        },
+        "middlewares": {
+            "root": "libs/shared/middlewares",
+            "sourceRoot": "libs/shared/middlewares/src",
+            "projectType": "library",
+            "targets": {
+                "build": {
+                    "executor": "@nrwl/node:package",
+                    "outputs": ["{options.outputPath}"],
+                    "options": {
+                        "outputPath": "dist/libs/shared/middlewares",
+                        "tsConfig": "libs/shared/middlewares/tsconfig.lib.json",
+                        "packageJson": "libs/shared/middlewares/package.json",
+                        "main": "libs/shared/middlewares/src/index.ts",
+                        "assets": ["libs/shared/middlewares/*.md"],
+                        "srcRootForCompilationRoot": "tsconfig.base.json"
+                    }
+                },
+                "lint": {
+                    "executor": "@nrwl/linter:eslint",
+                    "options": {
+                        "lintFilePatterns": ["libs/shared/middlewares/**/*.ts"]
+                    }
+                },
+                "test": {
+                    "executor": "@nrwl/jest:jest",
+                    "outputs": ["coverage/libs/shared/middlewares"],
+                    "options": {
+                        "jestConfig": "libs/shared/middlewares/jest.config.js",
+                        "passWithNoTests": true
+                    }
+                }
+            }
+        },
+        "players": {
+            "root": "libs/war/players",
+            "sourceRoot": "libs/war/players/src",
+            "projectType": "library",
+            "targets": {
+                "lint": {
+                    "executor": "@nrwl/linter:eslint",
+                    "options": {
+                        "lintFilePatterns": ["libs/war/players/**/*.ts"]
+                    }
+                },
+                "test": {
+                    "executor": "@nrwl/jest:jest",
+                    "outputs": ["coverage/libs/war/players"],
+                    "options": {
+                        "jestConfig": "libs/war/players/jest.config.js",
+                        "passWithNoTests": true
+                    }
+                }
+            }
+        },
+        "system": {
+            "root": "libs/shared/system",
+            "sourceRoot": "libs/shared/system/src",
+            "projectType": "library",
+            "targets": {
+                "build": {
+                    "executor": "@nrwl/node:package",
+                    "outputs": ["{options.outputPath}"],
+                    "options": {
+                        "outputPath": "dist/libs/shared/system",
+                        "tsConfig": "libs/shared/system/tsconfig.lib.json",
+                        "packageJson": "libs/shared/system/package.json",
+                        "main": "libs/shared/system/src/index.ts",
+                        "assets": ["libs/shared/system/*.md"],
+                        "srcRootForCompilationRoot": "tsconfig.base.json"
+                    }
+                },
+                "lint": {
+                    "executor": "@nrwl/linter:eslint",
+                    "options": {
+                        "lintFilePatterns": ["libs/shared/system/**/*.ts"]
+                    }
+                },
+                "test": {
+                    "executor": "@nrwl/jest:jest",
+                    "outputs": ["coverage/libs/shared/system"],
+                    "options": {
+                        "jestConfig": "libs/shared/system/jest.config.js",
+                        "passWithNoTests": true
+                    }
+                }
+            }
+        },
+        "utils": {
+            "root": "libs/shared/utils",
+            "sourceRoot": "libs/shared/utils/src",
+            "projectType": "library",
+            "targets": {
+                "build": {
+                    "executor": "@nrwl/node:package",
+                    "outputs": ["{options.outputPath}"],
+                    "options": {
+                        "outputPath": "dist/libs/shared/utils",
+                        "tsConfig": "libs/shared/utils/tsconfig.lib.json",
+                        "packageJson": "libs/shared/utils/package.json",
+                        "main": "libs/shared/utils/src/index.ts",
+                        "assets": ["libs/shared/utils/*.md"],
+                        "srcRootForCompilationRoot": "tsconfig.base.json"
+                    }
+                },
+                "lint": {
+                    "executor": "@nrwl/linter:eslint",
+                    "options": {
+                        "lintFilePatterns": ["libs/shared/utils/**/*.ts"]
+                    }
+                },
+                "test": {
+                    "executor": "@nrwl/jest:jest",
+                    "outputs": ["coverage/libs/shared/utils"],
+                    "options": {
+                        "jestConfig": "libs/shared/utils/jest.config.js",
+                        "passWithNoTests": true
+                    }
+                }
+            }
+        },
+        "war": {
+            "root": "apps/war",
+            "sourceRoot": "apps/war/src",
+            "projectType": "application",
+            "targets": {
+                "build": {
+                    "executor": "@nrwl/node:build",
+                    "outputs": ["{options.outputPath}"],
+                    "options": {
+                        "outputPath": "dist/apps/war",
+                        "main": "apps/war/src/main.ts",
+                        "tsConfig": "apps/war/tsconfig.app.json",
+                        "assets": [
+                            {
+                                "input": "libs/shared/environment/src/lib/environments",
+                                "glob": "**/*",
+                                "output": "./environments"
+                            }
+                        ]
+                    },
+                    "configurations": {
+                        "production": {
+                            "optimization": true,
+                            "extractLicenses": true,
+                            "inspect": false
+                        }
+                    }
+                },
+                "serve": {
+                    "executor": "@nrwl/node:execute",
+                    "options": {
+                        "buildTarget": "war:build"
+                    }
+                },
+                "lint": {
+                    "executor": "@nrwl/linter:eslint",
+                    "options": {
+                        "lintFilePatterns": ["apps/war/**/*.ts"]
+                    }
+                },
+                "test": {
+                    "executor": "@nrwl/jest:jest",
+                    "outputs": ["coverage/apps/war"],
+                    "options": {
+                        "jestConfig": "apps/war/jest.config.js",
+                        "passWithNoTests": true
+                    }
+                }
+            }
+        }
+    },
+    "cli": {
+        "defaultCollection": "@nrwl/express"
+    },
+    "defaultProject": "war"
+}

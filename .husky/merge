@@ -1,0 +1,7 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+yarn install --frozen-lockfile
+yarn format:write
+yarn affected:lint:fix
+yarn affected:test

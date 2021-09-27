@@ -1,0 +1,70 @@
+{
+    "npmScope": "card-games-api-challenge",
+    "affected": {
+        "defaultBase": "master"
+    },
+    "implicitDependencies": {
+        "package.json": {
+            "dependencies": "*",
+            "devDependencies": "*"
+        },
+        ".eslintrc.json": "*"
+    },
+    "tasksRunnerOptions": {
+        "default": {
+            "runner": "@nrwl/nx-cloud",
+            "options": {
+                "cacheableOperations": ["build", "lint", "test"],
+                "accessToken": "OTAwMWI2MDktYmFlMC00YmVhLTkyNTktZjFjMWI3MDI5YTkzfHJlYWQtd3JpdGU=",
+                "canTrackAnalytics": false,
+                "showUsageWarnings": true
+            }
+        }
+    },
+    "targetDependencies": {
+        "build": [
+            {
+                "target": "build",
+                "projects": "dependencies"
+            }
+        ]
+    },
+    "projects": {
+        "battle-logs": {
+            "tags": []
+        },
+        "battles": {
+            "tags": []
+        },
+        "database": {
+            "tags": []
+        },
+        "decks": {
+            "tags": []
+        },
+        "environment": {
+            "tags": []
+        },
+        "games": {
+            "tags": []
+        },
+        "logger": {
+            "tags": []
+        },
+        "middlewares": {
+            "tags": []
+        },
+        "players": {
+            "tags": []
+        },
+        "system": {
+            "tags": []
+        },
+        "utils": {
+            "tags": []
+        },
+        "war": {
+            "tags": []
+        }
+    }
+}

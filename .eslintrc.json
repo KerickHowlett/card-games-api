@@ -1,0 +1,145 @@
+{
+    "root": true,
+    "ignorePatterns": ["**/*"],
+    "plugins": ["@nrwl/nx"],
+    "extends": ["prettier"],
+    "env": {
+        "commonjs": true,
+        "jest": true,
+        "node": true
+    },
+    "overrides": [
+        {
+            "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+            "rules": {
+                "@nrwl/nx/enforce-module-boundaries": [
+                    "error",
+                    {
+                        "enforceBuildableLibDependency": false,
+                        "allow": [],
+                        "depConstraints": [
+                            {
+                                "sourceTag": "*",
+                                "onlyDependOnLibsWithTags": ["*"]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "files": ["*.ts", "*.tsx"],
+            "extends": ["plugin:@nrwl/nx/typescript"],
+            "plugins": ["@typescript-eslint", "eslint-plugin-import", "import"],
+            "settings": {
+                "import/cache": {
+                    "lifetime": "Infinity"
+                },
+                "import/internal-regex": []
+            },
+            "rules": {
+                "import/no-deprecated": "warn",
+                "indent": ["error", 4],
+                "no-bitwise": "error",
+                "no-caller": "error",
+                "no-console": [
+                    "error",
+                    {
+                        "allow": [
+                            "log",
+                            "warn",
+                            "dir",
+                            "timeLog",
+                            "assert",
+                            "clear",
+                            "count",
+                            "countReset",
+                            "group",
+                            "groupEnd",
+                            "table",
+                            "dirxml",
+                            "error",
+                            "groupCollapsed",
+                            "Console",
+                            "profile",
+                            "profileEnd",
+                            "timeStamp",
+                            "context"
+                        ]
+                    }
+                ],
+                "no-debugger": "error",
+                "no-empty": "off",
+                "no-extra-boolean-cast": "off",
+                "no-eval": "error",
+                "no-fallthrough": "error",
+                "no-new-wrappers": "error",
+                "no-restricted-imports": ["error", "rxjs/Rx"],
+                "no-throw-literal": "error",
+                "no-undef": "error",
+                "no-undef-init": "error",
+                "no-underscore-dangle": "off",
+                "no-var": "error",
+                "semi": ["error", "always"],
+                "space-in-parens": [0, "always", { "exceptions": ["empty"] }]
+            }
+        },
+        {
+            "files": ["*.js", "*.jsx"],
+            "extends": ["plugin:@nrwl/nx/javascript"],
+            "plugins": ["eslint-plugin-import", "import"],
+            "settings": {
+                "import/cache": {
+                    "lifetime": "Infinity"
+                },
+                "import/internal-regex": []
+            },
+            "rules": {
+                "import/no-deprecated": "warn",
+                "indent": ["error", 4],
+                "no-bitwise": "error",
+                "no-caller": "error",
+                "no-console": [
+                    "error",
+                    {
+                        "allow": [
+                            "log",
+                            "warn",
+                            "dir",
+                            "timeLog",
+                            "assert",
+                            "clear",
+                            "count",
+                            "countReset",
+                            "group",
+                            "groupEnd",
+                            "table",
+                            "dirxml",
+                            "error",
+                            "groupCollapsed",
+                            "Console",
+                            "profile",
+                            "profileEnd",
+                            "timeStamp",
+                            "context"
+                        ]
+                    }
+                ],
+                "no-debugger": "error",
+                "no-empty": "off",
+                "no-extra-boolean-cast": "off",
+                "no-eval": "error",
+                "no-fallthrough": "error",
+                "no-new-wrappers": "error",
+                "no-restricted-imports": ["error", "rxjs/Rx"],
+                "no-throw-literal": "error",
+                "no-undef": "error",
+                "no-undef-init": "error",
+                "no-underscore-dangle": "off",
+                "no-var": "error",
+                "semi": ["error", "always"],
+                "space-in-parens": [0, "always", { "exceptions": ["empty"] }]
+            }
+        }
+    ]
+}

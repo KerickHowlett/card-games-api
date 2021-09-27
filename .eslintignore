@@ -1,0 +1,15 @@
+.git
+.github
+*.conf
+**/.*
+build
+cache
+coverage
+data
+dist
+node_modules
+package.json
+
+**/*.db
+
+rest-client
