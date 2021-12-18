@@ -1,4 +1,4 @@
-# Card Games API War Game Assessment Challenge
+# Card Games API | War Game
 
 > In my never ending pursuit of cultivating my talents and strengthening my weaknesses, I decided to try creating a workspace for creating API Playing Card games.
 > This first one is the ever classic war, and the instructions on how to play are at the bottom.
